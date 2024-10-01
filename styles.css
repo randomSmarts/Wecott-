@@ -127,18 +127,15 @@ main {
     margin-bottom: 1rem;
 }
 
-.boycott-actions button {
-    background-color: #00aaff;
-    border: none;
-    color: white;
-    padding: 0.5rem 1rem;
-    margin: 0.3rem;
-    cursor: pointer;
-    border-radius: 5px;
+.boycott-info {
+    margin-top: 1rem;
+    color: #aaa;
+    font-size: 14px;
 }
 
-.boycott-actions button:hover {
-    background-color: #008ecc;
+.boycott-info span {
+    display: block;
+    margin-top: 5px;
 }
 
 .add-boycott-btn {
@@ -171,7 +168,7 @@ main {
     background-color: #202020;
     padding: 20px;
     border-radius: 8px;
-    margin: 15% auto;
+    margin: 10% auto;
     width: 500px;
 }
 
@@ -187,4 +184,36 @@ main {
     color: #fff;
     text-decoration: none;
     cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #303030;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.submit-btn {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #008ecc;
 }

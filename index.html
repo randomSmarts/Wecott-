@@ -57,14 +57,30 @@
         <span id="close-modal" class="close">&times;</span>
         <h2>Add a Boycott</h2>
         <form id="add-boycott-form">
-            <label for="boycott-image">Image URL:</label>
-            <input type="text" id="boycott-image" name="boycott-image" placeholder="Paste image URL here" required><br><br>
+            <div class="form-group">
+                <label for="boycott-image">Image URL:</label>
+                <input type="text" id="boycott-image" name="boycott-image" placeholder="Paste image URL here" required>
+            </div>
 
-            <label for="boycott-title">Boycott Title:</label>
-            <input type="text" id="boycott-title" name="boycott-title" placeholder="Enter title here" required><br><br>
+            <div class="form-group">
+                <label for="boycott-title">Boycott Title:</label>
+                <input type="text" id="boycott-title" name="boycott-title" placeholder="Enter title here" required>
+            </div>
 
-            <label for="boycott-description">Boycott Description:</label>
-            <textarea id="boycott-description" name="boycott-description" rows="4" placeholder="Enter description here" required></textarea><br><br>
+            <div class="form-group">
+                <label for="boycott-description">Boycott Description:</label>
+                <textarea id="boycott-description" name="boycott-description" rows="4" placeholder="Enter description here" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="boycott-joined">People Joined:</label>
+                <input type="number" id="boycott-joined" name="boycott-joined" placeholder="Number of people joined" required>
+            </div>
+
+            <div class="form-group">
+                <label for="boycott-created-on">Created On:</label>
+                <input type="date" id="boycott-created-on" name="boycott-created-on" required>
+            </div>
 
             <button type="submit" class="submit-btn">Submit</button>
         </form>
