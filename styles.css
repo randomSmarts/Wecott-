@@ -1,65 +1,190 @@
-/* Reset and General Styles */
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body, html {
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
-    background: #1b1b1b;
+body {
+    background-color: #181818;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Main Content Styles */
-.main-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #202020;
+    height: 80px;
 }
 
-.main-title {
-    font-size: 4.5rem;
-    margin-bottom: 20px;
+.logo {
+    width: 150px;
 }
 
-.tagline {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+.header-middle {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
 }
 
-.btn-primary {
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    background-color: #007bff;
-    color: white;
+.search-bar {
+    padding: 0.8rem;
+    width: 500px;
+    background-color: #303030;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.search-bar::placeholder {
+    color: #aaa;
+}
+
+.header-right img {
+    width: 50px;
+    margin-left: 20px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 300px;
+    background-color: #202020;
+    padding: 2rem;
+    height: calc(100vh - 80px); /* To match the height of the header */
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding-top: 1rem;
+}
+
+.sidebar-menu li {
+    margin-bottom: 2rem;
+}
+
+.sidebar-menu a {
+    color: #fff;
     text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s;
+    font-size: 22px;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+.sidebar-menu a:hover {
+    color: #00aaff;
 }
 
-/* Floating Particles Background */
-.floating-particles {
-    position: absolute;
-    top: 0;
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab {
+    background-color: #303030;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.tab.active {
+    background-color: #00aaff;
+}
+
+.boycott-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Bigger boycott cards */
+    gap: 3rem;
+}
+
+.boycott-card {
+    background-color: #303030;
+    padding: 2rem;  /* Bigger padding for larger cards */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.boycott-thumbnail {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+.boycott-actions button {
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.boycott-actions button:hover {
+    background-color: #008ecc;
+}
+
+.add-boycott-btn {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-boycott-btn:hover {
+    background-color: #008ecc;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    background: #1b1b1b;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Particles.css styles (from particles.js) */
-canvas {
-    position: absolute;
-    display: block;
-    z-index: -1;
+.modal-content {
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15% auto;
+    width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
